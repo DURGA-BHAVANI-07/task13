@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Message</title>
+</head>
+<body>
+  <button id="welcomeButton">Show Welcome Message</button>
+
+  <script>
+    let timeoutId; 
+
+    document.getElementById('welcomeButton').addEventListener('click', () => {
+      
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+
+      timeoutId = setTimeout(() => {
+        alert('Welcome!');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
